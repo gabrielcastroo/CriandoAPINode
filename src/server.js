@@ -10,7 +10,8 @@ app.get('/produtos',(request,response,next)=>{
 
 //Passando função middleware como callback function da resposta da requisição .get
 app.get('/produtos',(request,response,next)=>{
-    response.send({ nome: 'MacBook', preco: 25000.99}) //o método send converte automaticamente para o formato json
+    //criando um retorno de um objeto de exemplo
+    response.send({ nome: 'MacBook', preco: 25000.99, dataFabricacao: 2021}) //o método send converte automaticamente para o formato json
 })
 
 app.listen(port, () => {
